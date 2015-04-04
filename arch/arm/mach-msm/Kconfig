@@ -3974,6 +3974,14 @@ config PCM_ROUTE_VOICE_STUB
 	default n
 	depends on ARCH_MSM8974
 
+config BRICKED_HOTPLUG
+	bool "Enable kernel based mpdecision"
+	depends on MSM_RUN_QUEUE_STATS
+	default y
+	help
+	  This enables kernel based multi core control.
+	  (up/down hotplug based on load)
+
 config KRAIT_REGULATOR
 	bool "Support Kraits powered via ganged regulators in the pmic"
 	help
